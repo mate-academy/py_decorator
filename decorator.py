@@ -3,11 +3,13 @@
 
 def hide(function):
     """decorator"""
-    def wrapped(arg):
-        if arg < 5:
-            arg *= 2
-        result = function(arg)
-        return result + 1 if result % 2 else result
+    def wrapped(argument):
+        if argument < 5:
+            argument *= 2
+        result = function(argument)
+        if result % 2:
+            return result + 1
+        return result
     return wrapped
 
 
