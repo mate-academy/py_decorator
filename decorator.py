@@ -1,11 +1,19 @@
-def hide(f):
+"""docstring"""
 
-    return lambda x: 42
+
+def hide(funct):
+    """decoration"""
+    def wrapper(val):
+        if val < 5:
+            val *= 2
+        result = funct(val)
+        if result % 2:
+            result += 1
+        return result
+    return wrapper
 
 
 @hide
-def f(x):
-    return x + 5
-
-
-print(f(7))
+def func(val):
+    """docstring"""
+    return val + 5
