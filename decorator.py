@@ -1,5 +1,6 @@
 """Calculate the result according to README.md instructions"""
 
+
 def hide(the_func):
     """Hide the tricky actions"""
     def wrapper(argument):
@@ -7,7 +8,6 @@ def hide(the_func):
         if the final function result is eve or odd"""
         wrapped = the_func(argument * 2 if argument < 5 else argument)
         return wrapped if (wrapped + 5) % 2 else wrapped + 1
-
     return wrapper
 
 
