@@ -2,12 +2,12 @@ import decorator
 
 
 def test_3():
-    assert decorator.f(3) == 12
+    assert decorator.fnctn(3) == 12
 
 
 def test_6():
-    assert decorator.f(6) == 12
+    assert decorator.fnctn(6) == 12
 
 
 def test_7():
-    assert decorator.f(7) == 12
+    assert decorator.fnctn(7) == 12
