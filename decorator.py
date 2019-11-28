@@ -1,11 +1,25 @@
-def hide(f):
+"""docstring"""
 
-    return lambda x: 42
+
+def hide(func):
+    """
+    decorator
+    :param func:
+    :return:
+    """
+    def wrapper(arg):
+        if arg < 5:
+            arg *= 2
+        res = func(arg)
+        return res + 1 if res % 2 else res
+    return wrapper
 
 
 @hide
-def f(x):
-    return x + 5
-
-
-print(f(7))
+def add_five(arg):
+    """
+    Adds 5 to the x
+    :param arg: int
+    :return: int
+    """
+    return arg + 5
