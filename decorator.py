@@ -16,5 +16,6 @@ def hide(func):
 
 
 @hide
-def five(x):
-    return x + 5
+def five(value):
+    """Func"""
+    return value + 5
