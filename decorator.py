@@ -1,11 +1,20 @@
-def hide(f):
+"""
+Create a decorator for the function with one argument x
+"""
 
-    return lambda x: 42
+
+def hide(func):
+    """Func"""
+    def wrapper(value):
+        if value < 5:
+            value *= 2
+        result = func(value)
+        if result % 2:
+            result += 1
+        return result
+    return wrapper
 
 
 @hide
-def f(x):
+def five(x):
     return x + 5
-
-
-print(f(7))
