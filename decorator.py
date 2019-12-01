@@ -16,3 +16,6 @@ def hide(function):
 def func(elem):
     """decorated method"""
     return elem + 5
+
+
+print(func(7))
